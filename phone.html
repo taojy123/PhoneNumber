@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>号码列表</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+    function copyToClipboard(maintext){
+      if (window.clipboardData){
+        window.clipboardData.setData("Text", maintext);
+        }else if (window.netscape){
+          try{
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+        }catch(e){
+            alert("该浏览器不支持一键复制！请手工复制文本");
+        }
+        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+        if (!clip) return;
+        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+        if (!trans) return;
+        trans.addDataFlavor('text/unicode');
+        var str = new Object();
+        var len = new Object();
+        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+        var copytext=maintext;
+        str.data=copytext;
+        trans.setTransferData("text/unicode",str,copytext.length*2);
+        var clipid=Components.interfaces.nsIClipboard;
+        if (!clip) return false;
+        clip.setData(trans,null,clipid.kGlobalClipboard);
+      }
+      alert("所有号码已经复制到剪贴板(仅限于IE或IE内核浏览器)");
+    }
+
+    $(function(){
+        function pad(i, n){
+            var s = i.toString()
+            var len = s.length
+            var t = n-len
+            for (var i=0; i<t; i++){
+                s = "0" + s
+            }
+            return s
+        }
+
+        var seq = location.search.replace("?", "")
+        var s = ""
+        for(var i=9999; i>=0; i--){
+            var phone = seq + pad(i, 4)
+            s = s + phone + "<br>"
+        }
+        $("#phones").html(s)
+
+        s = s.replace(/<br>/g, "\n")
+        copyToClipboard(s)
+    })
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="phones" style="text-align: center;">
+    </div>
+</body>
+
+</html>
+

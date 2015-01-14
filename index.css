@@ -1,0 +1,79 @@
+.mytitle {
+	BACKGROUND: url(images/bg.jpg) repeat-x 50% bottom; WIDTH: 100%
+}
+.BgSearch {
+	BACKGROUND: #323232; HEIGHT: 72px
+}
+.MCo {
+	MARGIN: auto; WIDTH: 720px; HEIGHT: 72px
+}
+.MCo FORM {
+	LINE-HEIGHT: 72px; HEIGHT: 72px
+}
+.MCo .mobile_tel {
+	FLOAT: left; MARGIN: 10px 0px; WIDTH: 243px; HEIGHT: 51px
+
+}
+.Mw_R {
+	BORDER-RIGHT: #cde9ff 1px solid; BORDER-TOP: #cde9ff 1px solid; MARGIN: auto; BORDER-LEFT: #cde9ff 1px solid; WIDTH: 682px; BORDER-BOTTOM: #cde9ff 1px solid
+}
+.Mw {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; MIN-HEIGHT: 100px; BACKGROUND: #cde9ff; MARGIN: auto; BORDER-LEFT: #ffffff 1px solid; WIDTH: 680px; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: auto
+}
+.Mw .title {
+	BACKGROUND: url(images/borderres.jpg) repeat-x 50% bottom; LINE-HEIGHT: 30px; HEIGHT: 30px
+}
+.Mw .Count {
+	WIDTH: auto; PADDING-TOP: 10px; HEIGHT: 100px
+}
+.Mw .Count UL {
+	MARGIN: 5px
+}
+.Mw .Count UL LI {
+	WIDTH: 80px; TEXT-ALIGN: center
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+BODY {
+	MARGIN: 0px auto
+}
+.fkce {
+	BACKGROUND: #c0e7f8; MARGIN: 0px auto; WIDTH: 900px
+}
+.fkt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.fkt LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+.fkt UL {
+	BORDER-RIGHT: #ffffff 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 2px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #ffffff 2px solid; WIDTH: 896px; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 2px solid; HEIGHT: 20px
+}
+.fkt LI {
+	MARGIN-TOP: 0px; WIDTH: 448px
+}
+.fkbj {
+	BORDER-RIGHT: #ffffff 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 0px solid; PADDING-LEFT: 0px; FONT-SIZE: 14px; BACKGROUND: #c0e7f8; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #ffffff 2px solid; WIDTH: 50px; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 2px solid; HEIGHT: 20px
+}
+.fklk {
+	BORDER-RIGHT: #ffffff 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 0px solid; PADDING-LEFT: 0px; FONT-SIZE: 14px; BACKGROUND: #c0e7f8; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #ffffff 2px solid; WIDTH: 50px; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 2px solid; HEIGHT: 20px
+}
+.fklk {
+	BORDER-LEFT-WIDTH: 0px; WIDTH: 844px
+}
+.fkbj P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; HEIGHT: 20px
+}
+.fklk P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; HEIGHT: 20px
+}
+.fklk P {
+	TEXT-ALIGN: left
+}
+.fklk P A {
+	FONT-SIZE: 12px; MARGIN-LEFT: 8px; COLOR: #0000ff
+}
+.fkbj P A {
+	FONT-WEIGHT: bold
+}
