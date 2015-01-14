@@ -29,7 +29,7 @@ class Frame1(wx.Frame):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
               pos=wx.Point(376, 173), size=wx.Size(793, 576),
-              style=wx.DEFAULT_FRAME_STYLE, title=u'\u6211\u8981\u67e5\u53f7')
+              style=wx.DEFAULT_FRAME_STYLE, title=u'本软件由 徐州康力源商贸有限公司 开发制作')
         self.SetClientSize(wx.Size(777, 538))
 
         self.panel1 = wx.Panel(id=wxID_FRAME1PANEL1, name='panel1', parent=self,
@@ -77,11 +77,11 @@ class Frame1(wx.Frame):
         for p in CITY_MAP.keys():
             self.listBox1.Append(p)
 
-        dlgtext = wx.TextEntryDialog(self,u'请输入启动密码') 
-        if dlgtext.ShowModal() != wx.ID_OK:
-            raise
-        if str(dlgtext.GetValue()) != "qq123456":
-            raise
+        # dlgtext = wx.TextEntryDialog(self,u'请输入启动密码') 
+        # if dlgtext.ShowModal() != wx.ID_OK:
+        #     raise
+        # if str(dlgtext.GetValue()) != "qq123456":
+        #     raise
 
 
 
@@ -142,6 +142,7 @@ class Frame1(wx.Frame):
         event.Skip()
 
     def OnButton1Button(self, event):
-        a = str(self.textCtrl1.GetValue())[:12*5000]
+        a = str(self.textCtrl1.GetValue())#[:12*5000]
+        a = a.replace("\n", "\r\n")
         setText(a)
         event.Skip()
