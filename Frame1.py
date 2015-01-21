@@ -4,10 +4,23 @@
 import wx
 import win32clipboard as w
 import win32con
+import os
+import re
 
 CITY_MAP = open("CITY_MAP.txt").read()
 CITY_MAP = eval(CITY_MAP)
 seg = {}
+
+FILTERS = []
+for name in os.listdir("./filter/"):
+    for line in open("./filter/" + name).readlines():
+        line = line.strip()
+        if line:
+            FILTERS.append(line)
+FILTERS = list(set(FILTERS))
+# FILTERS = ",".join(FILTERS)
+# FILTERS = "," + FILTERS + ","
+
 
 def setText(aString):
     w.OpenClipboard()
@@ -77,11 +90,11 @@ class Frame1(wx.Frame):
         for p in CITY_MAP.keys():
             self.listBox1.Append(p)
 
-        # dlgtext = wx.TextEntryDialog(self,u'请输入启动密码') 
-        # if dlgtext.ShowModal() != wx.ID_OK:
-        #     raise
-        # if str(dlgtext.GetValue()) != "qq123456":
-        #     raise
+        dlgtext = wx.TextEntryDialog(self,u'请输入启动密码') 
+        if dlgtext.ShowModal() != wx.ID_OK:
+            raise
+        if str(dlgtext.GetValue()) != "qq123456":
+            raise
 
 
 
@@ -131,18 +144,27 @@ class Frame1(wx.Frame):
         event.Skip()
 
     def OnListBox4Listbox(self, event):
+        global FILTERS
         self.textCtrl1.SetValue("")
         s = self.listBox4.GetStringSelection()
+        fs = []
+        for f in FILTERS:
+            if f[:7] == s:
+                fs.append(f)
+        # fs = re.findall(r",(%s.*?)," % s, FILTERS)
+        fs = ",".join(fs)
         numbers = []
         for i in range(9999, -1, -1):
             number = s + str(i).zfill(4)
+            if number in fs:
+                continue
             numbers.append(number)
         t = "\n".join(numbers)
         self.textCtrl1.SetValue(t)
         event.Skip()
 
     def OnButton1Button(self, event):
-        a = str(self.textCtrl1.GetValue())#[:12*5000]
+        a = str(self.textCtrl1.GetValue())[:12*5000]
         a = a.replace("\n", "\r\n")
         setText(a)
         event.Skip()
